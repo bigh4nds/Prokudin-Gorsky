@@ -1,0 +1,141 @@
+0:.1:1.0
+
+ans =
+
+  Columns 1 through 3
+
+         0    0.1000    0.2000
+
+  Columns 4 through 6
+
+    0.3000    0.4000    0.5000
+
+  Columns 7 through 9
+
+    0.6000    0.7000    0.8000
+
+  Columns 10 through 11
+
+    0.9000    1.0000
+
+ar'
+
+ans =
+
+         0
+    0.1000
+    0.2000
+    0.3000
+    0.4000
+    0.5000
+    0.6000
+    0.7000
+    0.8000
+    0.9000
+    1.0000
+
+transpose(ar)
+
+ans =
+
+         0
+    0.1000
+    0.2000
+    0.3000
+    0.4000
+    0.5000
+    0.6000
+    0.7000
+    0.8000
+    0.9000
+    1.0000
+
+ar''
+
+ans =
+
+  Columns 1 through 5
+
+         0    0.1000    0.2000    0.3000    0.4000
+
+  Columns 6 through 10
+
+    0.5000    0.6000    0.7000    0.8000    0.9000
+
+  Column 11
+
+    1.0000
+
+size(ar)
+
+ans =
+
+     1    11
+
+ar=ar(1:10)
+
+ar =
+
+  Columns 1 through 5
+
+         0    0.1000    0.2000    0.3000    0.4000
+
+  Columns 6 through 10
+
+    0.5000    0.6000    0.7000    0.8000    0.9000
+
+size(ar)
+
+ans =
+
+     1    10
+
+r(3,:)=ar;
+imagesc(r)
+
+im=imread('mms.jpg');
+imagesc(im);
+size(im)
+
+ans =
+
+   428   500     3
+
+
+redIm=im(:,:,1);
+colormap(gray)
+imagesc(redIm)
+figure
+figure(2)
+imagesc(im)
+
+size(im)
+
+ans =
+
+   428   500     3
+
+im(100:350,100:400,1)=0;
+figure(1)
+imagesc(im)
+clipim=im(1:200,1:200,:);
+imagesc(clipim)
+sim=circshift(clipim,[0 50]);
+figure(3)
+imagesc(sim)
+imagesc(rand(100,100,3));
+help save
+ SAVE Save workspace variables to disk. 
+    SAVE FILENAME saves all workspace variables to the binary "MAT-file"
+    named FILENAME.mat.  The data may be retrieved with LOAD.  If FILENAME
+    has no extension, .mat is assumed.  
+    .... (rest is deleted)
+
+help imwrite
+ IMWRITE Write image to graphics file.
+    IMWRITE(A,FILENAME,FMT) writes the image A to the file specified by
+    FILENAME in the format specified by FMT.
+    .... (rest is deleted)
+
+
+diary off
